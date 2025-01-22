@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON one</title>
+  </head>
+  <body>
+    <h1>A person details</h1>
+    <p id="unu"></p>
+
+    <script>
+      const person =
+        '{"name":"Unuching Marma", "age":32, "City":"Khagrachari"}';
+      let new_person = JSON.parse(person);
+      document.getElementById("unu").innerHTML =
+        new_person.name + ", " + new_person.City + ", Age:" + new_person.age;
+    </script>
+  </body>
+</html>

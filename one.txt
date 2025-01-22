@@ -1,1 +1,3 @@
 JSON stands for Javascript Object Notation
+JSON is language independent
+JSON syntax is a sunset of Javascript syntax
