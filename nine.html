@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looping in JSON</title>
+  </head>
+  <body>
+    <h1>Looping in JSON file using for in loop</h1>
+    <p id="mema"></p>
+
+    <script>
+      let my_objects =
+        '{"PC":"Walton", "Phone":"Pixel", "Shoe": "Apex", "Books":"Atomic Habits"}';
+
+      let new_obj = JSON.parse(my_objects);
+
+      let text = "";
+      for (const x in new_obj) {
+        text += new_obj[x] + ", ";
+      }
+      document.getElementById("mema").innerHTML = text;
+    </script>
+  </body>
+</html>
