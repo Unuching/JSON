@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Three</title>
+  </head>
+  <body>
+    <h1>JSON date</h1>
+    <p id="unu"></p>
+    <script>
+      let birth_day = '{"name":"Chengchengnu Marma", "Birthday":"2021-12-21"}';
+      let newBaby = JSON.parse(birth_day);
+
+      newBaby.Birthday = new Date(newBaby.Birthday);
+      document.getElementById("unu").innerHTML = newBaby.name + " "+ newBaby.Birthday;
+    </script>
+  </body>
+</html>
