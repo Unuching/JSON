@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON four</title>
+  </head>
+  <body>
+    <h1>
+      Functions are not allowed in JSON. We can write functions as a string in
+      JSON file. We can change it later.
+    </h1>
+    <p id="mema"></p>
+
+    <script>
+      let myWife =
+        '{"name":"Mrachingnu Marma", "age":"function(){return 31;}", "city":"Rangarh"}';
+      let myLove = JSON.parse(myWife);
+      //myLove.age = eval("(" + myLove.age + ")");
+      myLove.age = new Function(`return (${myLove.age})`)();
+      document.getElementById("mema").innerHTML =
+        myLove.name + " " + myLove.age();
+    </script>
+  </body>
+</html>

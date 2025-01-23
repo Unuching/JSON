@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON six</title>
+  </head>
+  <body>
+    <h1>Storing and retrieving date from local storage</h1>
+    <p id="mema"></p>
+
+    <script>
+      let new_object = { name: "Yamaha", model: 2022 };
+      let my_bike = JSON.stringify(new_object);
+      localStorage.setItem("myNewBike", my_bike);
+      //retieving data
+      let aNewBike = localStorage.getItem("myNewBike");
+      let bike = JSON.parse(aNewBike);
+      document.getElementById("mema").innerHTML =
+        bike.name + " " + "Model:" + bike.model;
+    </script>
+  </body>
+</html>
